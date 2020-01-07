@@ -105,7 +105,7 @@
         <p class="small text-center">
           HeckTimer is not affiliated or endorsed by <a href="http://athinkingape.com/" target="_blank" title="A Thinking Ape Entertainment">A Thinking Ape Entertainment Ltd</a>.  All graphics are courtesy of the Kingdoms of Heckfire fan kit.
          </p>
-         <p class="text-center">Created with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by GrecianGoddess<br/>
+         <p class="text-center">Created with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by GrecianGoddess | Tosinnijis<br/>
          <span class="small">Recreated from the original HeckTimer</span></p>
       </div>
     </div>
@@ -118,7 +118,7 @@
 
     function update() {
       
-      var one = DateTime.fromISO('2020-01-07T11:26:00Z');
+      var one = DateTime.fromISO('2020-01-07T11:00:00Z');
       var ct = DateTime.local();
       var int = Interval.fromDateTimes(one, ct).length('hours', true);
       var i = Math.ceil(int - (11 * (Math.floor(int / 11))));
@@ -209,7 +209,7 @@
             div2.className = 'card text-white bg-secondary mx-auto my-2'
             break;
           case 'Dragon Growth':
-            div2.className = 'card text-white bg-secondary mx-auto my-2'
+            div2.className = 'card text-white bg-muted mx-auto my-2'
             break;
           default:
             div2.className = 'card mx-auto  my-2'
@@ -223,16 +223,6 @@
       function findQ(i) {
         var q;
         switch (i) {
-      
-          // case 3:
-          //   q = 'Dragon Growth'
-          //   break;
-          // case 4:
-          //   q = 'Monster Slaying'
-          //   break;
-          // case 5:
-          //   q = 'Might Growth'
-          //   break;
           case 1:
             q = 'Troop Training'
             break;
@@ -255,7 +245,7 @@
             q = 'Might Growth'
             break;
           case 7:
-            q = 'Troops Training'
+            q = 'Troop Training'
             break;
           case 8:
             q = 'Research'
@@ -269,9 +259,8 @@
           case 11:
             q = 'Might Growth'
             break;
-          
-          // default:
-          //   q = 'ERROR'
+          default:
+            q = 'ERROR'
         }
         return q
       }
