@@ -118,7 +118,7 @@
 
     function update() {
       
-      var one = DateTime.fromISO('2020-01-03T03:00:00Z');
+      var one = DateTime.fromISO('2020-01-07T11:26:00Z');
       var ct = DateTime.local();
       var int = Interval.fromDateTimes(one, ct).length('hours', true);
       var i = Math.ceil(int - (11 * (Math.floor(int / 11))));
@@ -208,6 +208,9 @@
           case 'Construction':
             div2.className = 'card text-white bg-secondary mx-auto my-2'
             break;
+          case 'Dragon Growth':
+            div2.className = 'card text-white bg-secondary mx-auto my-2'
+            break;
           default:
             div2.className = 'card mx-auto  my-2'
         }
@@ -220,29 +223,42 @@
       function findQ(i) {
         var q;
         switch (i) {
+      
+          // case 3:
+          //   q = 'Dragon Growth'
+          //   break;
+          // case 4:
+          //   q = 'Monster Slaying'
+          //   break;
+          // case 5:
+          //   q = 'Might Growth'
+          //   break;
           case 1:
-            q = 'Research'
+            q = 'Troop Training'
             break;
           case 2:
-            q = 'Dragon Growth'
-            break;
-          case 3:
-            q = 'Might Growth'
-            break;
-          case 4:
-            q = 'Resources Gathering'
-            break;
-          case 5:
-            q = 'Troops Training'
-            break;
-          case 6:
             q = 'Monster Slaying'
             break;
-          case 7:
+          case 3:
             q = 'Construction'
             break;
-          case 8:
+          case 3:
+            q = 'Troop Training'
+            break;
+          case 4:
+            q = 'Dragon Growth'
+            break;
+          case 5:
+            q = 'Monster Slaying'
+            break;
+          case 6:
+            q = 'Might Growth'
+            break;
+          case 7:
             q = 'Troops Training'
+            break;
+          case 8:
+            q = 'Research'
             break;
           case 9:
             q = 'Dragon Growth'
@@ -253,11 +269,9 @@
           case 11:
             q = 'Might Growth'
             break;
-          case 12:
-            q = 'Troop Training'
-            break;
-          default:
-            q = 'ERROR'
+          
+          // default:
+          //   q = 'ERROR'
         }
         return q
       }
