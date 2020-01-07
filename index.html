@@ -134,10 +134,10 @@
       var domCurrentTime = document.getElementById('currentTime')
       domCurrentTime.removeChild(domCurrentTime.firstChild)
 
-      for (j = 0; j < 11; j++) {
+      for (j = 0; j < 12; j++) {
         var k = i + j;
-        if (k > 11) {
-          k = k - 11;
+        if (k > 12) {
+          k = k - 12;
         }
         var q = findQ(k)
         if (j == 0) {
@@ -196,7 +196,7 @@
           case 'Monster Slaying':
             div2.className = 'card text-white bg-danger mx-auto my-2'
             break;
-          case 'Resource Gathering':
+          case 'Resources Gathering':
             div2.className = 'card text-white bg-success mx-auto my-2'
             break;
           case 'Research':
@@ -259,6 +259,10 @@
           case 11:
             q = 'Might Growth'
             break;
+          case 12:
+            q = 'Resources Gathering'
+            break;
+            
           default:
             q = 'ERROR'
         }
