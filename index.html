@@ -37,7 +37,7 @@
   <meta name="apple-mobile-web-app-title" content="HeckTimer">
   <meta name="application-name" content="HeckTimer">
   <meta name="msapplication-TileColor" content="#ffc40d">
-  <meta name="theme-color" content=#002B36">
+  <meta name="theme-color" content="#002B36">
   
   <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
   <link rel="canonical" href="http://hecktimer.com" />
@@ -118,7 +118,7 @@
 
     function update() {
       
-      var one = DateTime.fromISO('2018-02-13T06:05:00Z');
+      var one = DateTime.fromISO('2020-01-03T03:00:00Z');
       var ct = DateTime.local();
       var int = Interval.fromDateTimes(one, ct).length('hours', true);
       var i = Math.ceil(int - (11 * (Math.floor(int / 11))));
@@ -221,37 +221,40 @@
         var q;
         switch (i) {
           case 1:
-            q = 'Troop Training'
-            break;
-          case 2:
-            q = 'Monster Slaying'
-            break;
-          case 3:
-            q = 'Resource Gathering'
-            break;
-          case 4:
             q = 'Research'
             break;
+          case 2:
+            q = 'Dragon Growth'
+            break;
+          case 3:
+            q = 'Might Growth'
+            break;
+          case 4:
+            q = 'Resources Gathering'
+            break;
           case 5:
-            q = 'Troop Training'
+            q = 'Troops Training'
             break;
           case 6:
             q = 'Monster Slaying'
             break;
           case 7:
-            q = 'Might Growth'
+            q = 'Construction'
             break;
           case 8:
-            q = 'Resource Gathering'
+            q = 'Troops Training'
             break;
           case 9:
-            q = 'Troop Training'
+            q = 'Dragon Growth'
             break;
           case 10:
             q = 'Monster Slaying'
             break;
           case 11:
-            q = 'Construction'
+            q = 'Might Growth'
+            break;
+          case 12:
+            q = 'Troop Training'
             break;
           default:
             q = 'ERROR'
