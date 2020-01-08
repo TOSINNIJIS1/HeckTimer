@@ -63,6 +63,7 @@
 <h1 style="font-size: 1.2rem;display: inline-block; padding-top: 0; padding-bottom: 0; margin-bottom: 0; margin-right: 1rem; margin-left: .5rem">HeckTimer</h1>
 </a>
 <div class="collapse navbar-collapse" id="navbar-collapsed">
+
 </div>
 </nav>
   <div class="container">
@@ -111,6 +112,7 @@
     </div>
   </div>
 
+
   <script>
     const { DateTime, Interval } = luxon;
 
@@ -118,7 +120,7 @@
 
     function update() {
       
-      var one = DateTime.fromISO('2020-01-07T11:00:00Z');
+      var one = DateTime.fromISO('2020-01-08T00:00:00Z');
       var ct = DateTime.local();
       var int = Interval.fromDateTimes(one, ct).length('hours', true);
       var i = Math.ceil(int - (11 * (Math.floor(int / 11))));
@@ -134,10 +136,10 @@
       var domCurrentTime = document.getElementById('currentTime')
       domCurrentTime.removeChild(domCurrentTime.firstChild)
 
-      for (j = 0; j < 12; j++) {
+      for (j = 0; j < 13; j++) {
         var k = i + j;
-        if (k > 12) {
-          k = k - 12;
+        if (k > 13) {
+          k = k - 13;
         }
         var q = findQ(k)
         if (j == 0) {
@@ -224,45 +226,44 @@
         var q;
         switch (i) {
           case 1:
-            q = 'Troop Training'
-            break;
-          case 2:
             q = 'Monster Slaying'
             break;
-          case 3:
-            q = 'Construction'
+          case 2:
+            q = 'Might Growth'
             break;
           case 3:
-            q = 'Troop Training'
+            q = 'Resources Gathering'
             break;
           case 4:
-            q = 'Dragon Growth'
+            q = 'Troop Training'
             break;
           case 5:
             q = 'Monster Slaying'
             break;
           case 6:
-            q = 'Might Growth'
+            q = 'Construction'
             break;
-          case 7:
+          case 07:
             q = 'Troop Training'
             break;
-          case 8:
-            q = 'Research'
-            break;
-          case 9:
+          case 08: 
             q = 'Dragon Growth'
             break;
-          case 10:
+          case 09:
             q = 'Monster Slaying'
             break;
-          case 11:
+          case 10:
             q = 'Might Growth'
             break;
-          case 12:
-            q = 'Resources Gathering'
+          case 11:
+            q = 'Troop Training' 
             break;
-            
+          case 12: 
+            q = 'Research'
+            break;
+          case 13:
+            q = 'Dragon Growth'
+            break;
           default:
             q = 'ERROR'
         }
