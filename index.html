@@ -37,7 +37,7 @@
   <meta name="apple-mobile-web-app-title" content="HeckTimer">
   <meta name="application-name" content="HeckTimer">
   <meta name="msapplication-TileColor" content="#ffc40d">
-  <meta name="theme-color" content=#002B36">
+  <meta name="theme-color" content="#002B36">
   
   <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
   <link rel="canonical" href="http://hecktimer.com" />
@@ -63,6 +63,7 @@
 <h1 style="font-size: 1.2rem;display: inline-block; padding-top: 0; padding-bottom: 0; margin-bottom: 0; margin-right: 1rem; margin-left: .5rem">HeckTimer</h1>
 </a>
 <div class="collapse navbar-collapse" id="navbar-collapsed">
+
 </div>
 </nav>
   <div class="container">
@@ -111,6 +112,7 @@
     </div>
   </div>
 
+
   <script>
     const { DateTime, Interval } = luxon;
 
@@ -118,7 +120,7 @@
 
     function update() {
       
-      var one = DateTime.fromISO('2018-02-13T06:05:00Z');
+      var one = DateTime.fromISO('2010-06-11T06:00:00Z');
       var ct = DateTime.local();
       var int = Interval.fromDateTimes(one, ct).length('hours', true);
       var i = Math.ceil(int - (11 * (Math.floor(int / 11))));
@@ -134,10 +136,10 @@
       var domCurrentTime = document.getElementById('currentTime')
       domCurrentTime.removeChild(domCurrentTime.firstChild)
 
-      for (j = 0; j < 11; j++) {
+      for (j = 0; j < 13; j++) {
         var k = i + j;
-        if (k > 11) {
-          k = k - 11;
+        if (k > 13) {
+          k = k - 13;
         }
         var q = findQ(k)
         if (j == 0) {
@@ -196,7 +198,7 @@
           case 'Monster Slaying':
             div2.className = 'card text-white bg-danger mx-auto my-2'
             break;
-          case 'Resource Gathering':
+          case 'Resources Gathering':
             div2.className = 'card text-white bg-success mx-auto my-2'
             break;
           case 'Research':
@@ -207,6 +209,9 @@
             break;
           case 'Construction':
             div2.className = 'card text-white bg-secondary mx-auto my-2'
+            break;
+          case 'Dragon Growth':
+            div2.className = 'card text-white bg-muted mx-auto my-2'
             break;
           default:
             div2.className = 'card mx-auto  my-2'
@@ -221,37 +226,43 @@
         var q;
         switch (i) {
           case 1:
-            q = 'Troop Training'
+            q = 'Monster Slaying'
             break;
           case 2:
-            q = 'Monster Slaying'
-            break;
-          case 3:
-            q = 'Resource Gathering'
-            break;
-          case 4:
-            q = 'Research'
-            break;
-          case 5:
-            q = 'Troop Training'
-            break;
-          case 6:
-            q = 'Monster Slaying'
-            break;
-          case 7:
             q = 'Might Growth'
             break;
-          case 8:
-            q = 'Resource Gathering'
+          case 3:
+            q = 'Resources Gathering'
             break;
-          case 9:
+          case 4:
             q = 'Troop Training'
             break;
-          case 10:
+          case 5:
             q = 'Monster Slaying'
             break;
-          case 11:
+          case 6:
             q = 'Construction'
+            break;
+          case 07:
+            q = 'Troop Training'
+            break;
+          case 08: 
+            q = 'Dragon Growth'
+            break;
+          case 09:
+            q = 'Monster Slaying'
+            break;
+          case 10:
+            q = 'Might Growth'
+            break;
+          case 11:
+            q = 'Troop Training' 
+            break;
+          case 12: 
+            q = 'Research'
+            break;
+          case 13:
+            q = 'Dragon Growth'
             break;
           default:
             q = 'ERROR'
